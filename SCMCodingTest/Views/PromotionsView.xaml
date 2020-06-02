@@ -9,6 +9,30 @@
     <Window.DataContext>
         <local:PromotionsViewModel/>
     </Window.DataContext>
+    <Window.Resources>
+        <Style x:Key="Promotionstyle" TargetType="TextBox">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="TextBox.GotFocus">
+                    <BeginStoryboard>
+                        <Storyboard Storyboard.TargetProperty="(TextBox.FontSize)">
+                            <DoubleAnimationUsingKeyFrames>
+                                <EasingDoubleKeyFrame KeyTime="0" Value="16"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="TextBox.LostFocus">
+                    <BeginStoryboard>
+                        <Storyboard Storyboard.TargetProperty="(TextBox.FontSize)">
+                            <DoubleAnimationUsingKeyFrames>
+                                <EasingDoubleKeyFrame KeyTime="0" Value="14"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
 
         <StackPanel Orientation="Horizontal">
@@ -18,31 +42,34 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Product A" Margin="30,50,0, 320" FontSize="14"/>
-            <TextBox x:Name="txtItems"  Text="{Binding AItemCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,50,0,340"/>
+            <TextBox x:Name="txtItems"  Text="{Binding AItemCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,50,0,340" Style="{StaticResource Promotionstyle}"/>
             <TextBox x:Name="txtPrice" Text="50" Width="50" Margin="50,50,0,340" HorizontalContentAlignment="Center" FontSize="16" IsReadOnly="True" />
-            <TextBox x:Name="txtTotalPrice" Text="{Binding PromotionAValue}" Width="50" Margin="50,50,0,340" IsReadOnly="True"/>
+            <TextBox x:Name="txtTotalPriceA" Text="{Binding TotalPriceA,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,50,0,340" IsReadOnly="True"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Product B" Margin="30,90,0, 280" FontSize="14"/>
-            <TextBox x:Name="txtItemsB"  Text="{Binding BItemCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,90,0, 300"/>
+            <TextBox x:Name="txtItemsB"  Text="{Binding BItemCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,90,0, 300"  Style="{StaticResource Promotionstyle}"/>
             <TextBox x:Name="txtPriceB" Text="30" Width="50" Margin="50,90,0,300" HorizontalContentAlignment="Center" FontSize="16" IsReadOnly="True" />
-            <TextBox x:Name="txtTotalPriceB" Text="{Binding PromotionAValue}" Width="50" Margin="50,90,0,300" IsReadOnly="True"/>
+            <TextBox x:Name="txtTotalPriceB" Text="{Binding TotalPriceB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,90,0,300" IsReadOnly="True"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Product C" Margin="30,130,0, 240" FontSize="14"/>
-            <TextBox x:Name="txtItemsC"  Text="{Binding CItemCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,130,0,260"/>
+            <TextBox x:Name="txtItemsC"  Text="{Binding CItemCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,130,0,260"  Style="{StaticResource Promotionstyle}"/>
             <TextBox x:Name="txtPriceC" Text="20" Width="50" Margin="50,130,0,260" HorizontalContentAlignment="Center" FontSize="16" IsReadOnly="True" />
-            <TextBox x:Name="txtTotalPriceC" Text="{Binding PromotionAValue}" Width="50" Margin="50,130,0,260" IsReadOnly="True"/>
+            <TextBox x:Name="txtTotalPriceC" Text="{Binding TotalPriceC,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,130,0,260" IsReadOnly="True"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Product D" Margin="30,180,0, 190" FontSize="14"/>
-            <TextBox x:Name="txtItemsD" Text="{Binding DItemCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,180,0,210"/>
+            <TextBox x:Name="txtItemsD" Text="{Binding DItemCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,180,0,210"  Style="{StaticResource Promotionstyle}"/>
             <TextBox x:Name="txtPriceD" Text="15" Width="50" Margin="50,180,0,210" HorizontalContentAlignment="Center" FontSize="16" IsReadOnly="True" />
-            <TextBox x:Name="txtTotalPriceD" Text="{Binding PromotionAValue}" Width="50" Margin="50,180,0,210" IsReadOnly="True"/>
+            <TextBox x:Name="txtTotalPriceD" Text="{Binding TotalPriceD,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="50,180,0,210" IsReadOnly="True"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Total Price" Margin="250,240,0, 140" FontSize="14" FontWeight="Bold"/>
             <TextBox x:Name="txtTotalAmount" Text="{Binding TotalPrice,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="80" Margin="20,240,0,140"/>
+        </StackPanel>
+        <StackPanel>
+            <Button x:Name="btnapply" Content="Apply"  Width="80" Margin="20,290,0,0" Command="{Binding ApplyButton}"/>
         </StackPanel>
     </Grid>
 </Window>

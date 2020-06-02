@@ -8,10 +8,10 @@ namespace SCMCodingTest
 {
     class Constants
     {
-        public static double PromotionA=50;
-        public static double PromotionB=30;
-        public static double PromotionC=20;
-        public static double PromotionD=15;
+        public static int PromotionA=50;
+        public static int PromotionB =30;
+        public static int PromotionC =20;
+        public static int PromotionD =15;
 
     }
 }

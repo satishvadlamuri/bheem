@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace LicenseGeneration
+namespace SCMCodingTest
 {
     public class RelayCommand<T> : ICommand
     {

@@ -66,6 +66,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Models\PromotionsModel.cs" />
     <Compile Include="Utility\Constants.cs" />
+    <Compile Include="ViewModels\ModelBase\ViewModelBase.cs" />
     <Compile Include="ViewModels\PromotionsViewModel.cs" />
     <Compile Include="Views\PromotionsView.xaml.cs">
       <DependentUpon>PromotionsView.xaml</DependentUpon>
