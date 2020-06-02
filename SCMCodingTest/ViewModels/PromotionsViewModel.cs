@@ -186,7 +186,7 @@ namespace SCMCodingTest
                 }
                 TotalPrice = TotalPriceA + TotalPriceB + TotalPriceC + TotalPriceD;
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Please Check Values");
             }
