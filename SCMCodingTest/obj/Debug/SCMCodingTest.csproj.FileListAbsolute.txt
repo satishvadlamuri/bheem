@@ -1,0 +1,14 @@
+D:\Testing\SCMCodingTest\SCMCodingTest\bin\Debug\SCMCodingTest.exe.config
+D:\Testing\SCMCodingTest\SCMCodingTest\bin\Debug\SCMCodingTest.exe
+D:\Testing\SCMCodingTest\SCMCodingTest\bin\Debug\SCMCodingTest.pdb
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\SCMCodingTest.csprojAssemblyReference.cache
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\Views\PromotionsView.g.cs
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\App.g.cs
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\SCMCodingTest_MarkupCompile.cache
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\SCMCodingTest_MarkupCompile.lref
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\Views\PromotionsView.baml
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\SCMCodingTest.g.resources
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\SCMCodingTest.Properties.Resources.resources
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\SCMCodingTest.csproj.GenerateResource.cache
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\SCMCodingTest.exe
+D:\Testing\SCMCodingTest\SCMCodingTest\obj\Debug\SCMCodingTest.pdb
